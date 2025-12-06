@@ -1,0 +1,248 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Reeves Contact Enrichment System",
+  "description": "Schema for enriched contact data that supplements phone contacts with contextual information, communication preferences, and relationship metadata. IMPORTANT: Keep entries lean - see /reeves/ARCHITECTURE.md for data management rules. Detailed context belongs in learning-logs and artifacts, NOT in contacts.json.",
+  "type": "object",
+  "patternProperties": {
+    "^[a-z_]+$": {
+      "type": "object",
+      "required": ["primary_phone"],
+      "properties": {
+        "primary_phone": {
+          "type": "string",
+          "description": "Primary phone number (format: E.164 or as stored in Messages)",
+          "examples": ["4842255030", "+18284551835"]
+        },
+        "alternate_phones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Additional phone numbers for this contact"
+        },
+        "email": {
+          "type": ["string", "null"],
+          "format": "email",
+          "description": "Primary email address"
+        },
+        "relationship": {
+          "type": "string",
+          "description": "How Daniel knows this person",
+          "examples": [
+            "friend",
+            "family",
+            "professional",
+            "contractor",
+            "house_sale_coordinator",
+            "friend_of_emily",
+            "business_associate"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "description": "Their role in Daniel's life or business context",
+          "examples": [
+            "house_sale_coordinator",
+            "painting_contractor",
+            "attorney",
+            "roommate",
+            "daughter",
+            "aunt"
+          ]
+        },
+        "context": {
+          "type": "string",
+          "description": "Brief context about this person and why they're in contact list"
+        },
+        "projects": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Reeves project slugs this person is involved in",
+          "examples": [["239-eagle-dr-house-sale", "honda-crv-recovery"]]
+        },
+        "communication_preferences": {
+          "type": "object",
+          "properties": {
+            "tone": {
+              "type": "string",
+              "description": "Communication tone to use with this person",
+              "enum": [
+                "straightforward",
+                "professional",
+                "warm",
+                "casual",
+                "formal",
+                "family-oriented"
+              ]
+            },
+            "punctuation": {
+              "type": "string",
+              "description": "Punctuation style preferences",
+              "enum": [
+                "minimal_exclamation_points",
+                "standard_business",
+                "exclamation_points_okay",
+                "emoji_okay"
+              ]
+            },
+            "formality": {
+              "type": "string",
+              "description": "Level of formality",
+              "enum": [
+                "casual",
+                "polite_professional",
+                "formal",
+                "affectionate"
+              ]
+            },
+            "preferred_method": {
+              "type": "string",
+              "description": "Preferred contact method",
+              "enum": ["text", "call", "email", "imessage"]
+            },
+            "best_time": {
+              "type": "string",
+              "description": "Best time to contact",
+              "examples": [
+                "business hours",
+                "evenings after 6pm",
+                "weekends only",
+                "anytime"
+              ]
+            }
+          }
+        },
+        "recent_interactions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["date", "type"],
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "description": "Date of interaction (YYYY-MM-DD)"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["text", "call", "email", "in_person"],
+                "description": "Type of interaction"
+              },
+              "topic": {
+                "type": "string",
+                "description": "Brief topic or subject of interaction"
+              },
+              "outcome": {
+                "type": "string",
+                "description": "Result or outcome of interaction"
+              },
+              "reeves_task_id": {
+                "type": ["number", "null"],
+                "description": "Associated Reeves task ID if applicable"
+              }
+            }
+          },
+          "description": "Log of recent interactions with this person"
+        },
+        "active_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Current pending actions or active topics with this person",
+          "examples": [
+            [
+              "basement bathroom window install",
+              "carpet cleaning approval",
+              "water intrusion assessment"
+            ]
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about this contact"
+        },
+        "work_schedule": {
+          "type": "string",
+          "description": "Work schedule if relevant to coordination",
+          "examples": ["works nights", "off weekends", "business hours M-F"]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "em_rothrock": {
+        "primary_phone": "4842255030",
+        "email": null,
+        "relationship": "friend_of_emily",
+        "context": "Borrowed Honda CRV, coordinating return",
+        "projects": ["honda-crv-recovery"],
+        "communication_preferences": {
+          "tone": "straightforward",
+          "punctuation": "minimal_exclamation_points",
+          "formality": "casual",
+          "preferred_method": "text",
+          "best_time": "evenings after 6pm"
+        },
+        "recent_interactions": [
+          {
+            "date": "2025-12-06",
+            "type": "text",
+            "topic": "CRV pickup scheduling - asked about next weekend Dec 14-15",
+            "reeves_task_id": 67
+          },
+          {
+            "date": "2025-12-05",
+            "type": "text",
+            "topic": "Asked if she could return CRV Friday Dec 6",
+            "outcome": "Said she's off this weekend, works nights next weekend",
+            "reeves_task_id": 67
+          }
+        ],
+        "active_items": [
+          "Coordinate CRV return - waiting for response about Dec 14-15"
+        ],
+        "work_schedule": "works nights, off current weekend",
+        "notes": "Has had CRV since early November. Works long hours. Be direct and professional in communication."
+      },
+      "heather_mitchell": {
+        "primary_phone": "18284551835",
+        "email": null,
+        "relationship": "professional",
+        "role": "house_sale_coordinator",
+        "context": "Coordinates all house improvements, contractors, and scheduling for 239 Eagle Dr sale",
+        "projects": ["239-eagle-dr-house-sale"],
+        "communication_preferences": {
+          "tone": "professional",
+          "punctuation": "standard_business",
+          "formality": "polite_professional",
+          "preferred_method": "text",
+          "best_time": "business hours"
+        },
+        "recent_interactions": [
+          {
+            "date": "2025-12-06",
+            "type": "text",
+            "topic": "Window install follow-up",
+            "outcome": "Will check tomorrow (Dec 7) if window was installed, take pics. Cleaner will update carpet quote.",
+            "reeves_task_id": 73
+          },
+          {
+            "date": "2025-11-30",
+            "type": "text",
+            "topic": "Basement bathroom window install scheduled for Dec 5"
+          }
+        ],
+        "active_items": [
+          "Basement bathroom window install verification",
+          "Carpet cleaning quote update",
+          "Water intrusion assessment follow-up"
+        ],
+        "notes": "Main point of contact for all 239 Eagle Dr matters. Coordinates contractors and improvements."
+      }
+    }
+  ]
+}

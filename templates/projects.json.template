@@ -1,0 +1,8 @@
+{
+  "example-project": {
+    "owner": "reeves",
+    "status": "active",
+    "context_file": null,
+    "notes": "This is an example project. Delete this and create your own."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "example_contact": {
+    "primary_phone": "5551234567",
+    "relationship": "example",
+    "context": "This is an example contact. Delete and add your own.",
+    "projects": [],
+    "communication_preferences": {
+      "tone": "professional",
+      "punctuation": "standard_business",
+      "formality": "polite_professional",
+      "preferred_method": "text"
+    },
+    "recent_interactions": [],
+    "context_files": [],
+    "notes": "See /reeves/ARCHITECTURE.md for contact management rules."
+  }
+}
