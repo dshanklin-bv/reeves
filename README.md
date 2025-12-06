@@ -1,6 +1,24 @@
 # Reeves - AI Task Management System
 
-> **Personal AI assistant powered by MCP for task management, project coordination, and life organization.**
+> **Your personal AI assistant that remembers everything, handles your busywork, and saves you hours every day.**
+
+## What is Reeves?
+
+Reeves is an AI-powered task manager that works alongside Claude Code. Instead of juggling sticky notes, scattered to-do lists, and forgotten context, Reeves remembers everything for you and handles the tedious stuff automatically.
+
+## Real-World Time Savings (From Today)
+
+**15 minutes saved:** Reviewed 24 hours of text messages, identified 5 new tasks, updated 3 existing tasks, and organized follow-ups—all in one conversation.
+
+**10 minutes saved:** Drafted and sent a business notification text with the correct professional tone, verified recipient information across two databases to prevent wrong-recipient errors.
+
+**20 minutes saved:** Created a partnership project with context files, follow-up tasks, and learning logs based on a single email discussion.
+
+**5 minutes saved:** Tracked lunch expenses and gift purchases automatically by mentioning them once in conversation.
+
+**Total: 50+ minutes saved today. That's 6+ hours per week. 25+ hours per month.**
+
+## What Does Reeves Actually Do?
 
 Reeves is a persistent task management system designed for AI-first workflows. It maintains state across Claude Code sessions, manages complex projects, and helps coordinate life's moving parts.
 

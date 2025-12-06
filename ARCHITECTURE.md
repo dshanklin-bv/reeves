@@ -277,19 +277,109 @@ Phase 4 (2-3yr):   Full platform (web, vector search, etc)
 
 ---
 
+## Message Sending Protocol
+
+**CRITICAL: Double-Verify Before Send**
+
+### Two-Source Verification Required
+
+Before sending any message, the recipient's phone number MUST exist in BOTH:
+
+1. **Messages database** (from SMS/iMessage system)
+2. **Reeves contacts.json** (your contact data)
+
+**If phone numbers don't match → DO NOT SEND**
+
+### Verification Workflow
+
+```
+Step 1: Look up contact in contacts.json
+  ├─ Found? → Use phone number from contacts.json
+  └─ Not found? → STOP, ask user to add contact first
+
+Step 2: Verify phone exists in Messages database
+  ├─ Use find_contact tool
+  ├─ Match found? → Continue
+  └─ No match? → STOP, phone numbers don't align
+
+Step 3: Confirm both match
+  ├─ contacts.json phone: "12819001802"
+  ├─ Messages DB phone: "12819001802"
+  └─ Match? ✓ Proceed to send
+
+Step 4: Send using verified phone number
+  └─ NEVER use "contact:N" indices
+```
+
+### Why This Matters
+
+- **Wrong recipient = serious consequences** (business, legal, personal)
+- **No undo** - Messages cannot be recalled
+- **Contact:N is unreliable** - Index changes between calls
+- **Prevents accidental sends** - Two databases must agree
+
+### Implementation Rules
+
+**DO:**
+- ✓ Use phone numbers directly (e.g., "12819001802")
+- ✓ Verify against both contacts.json AND Messages DB
+- ✓ Stop if phone numbers don't match
+- ✓ Ask user to update contacts.json if missing
+- ✓ Log all sent messages to recent_interactions
+
+**DON'T:**
+- ✗ Use "contact:N" indices (they're unstable)
+- ✗ Send without verification
+- ✗ Guess phone numbers
+- ✗ Assume contact mapping is correct
+
+### Example: Safe Send
+
+```json
+// contacts.json entry
+{
+  "john_fuqua": {
+    "primary_phone": "12819001802",
+    "email": "john@johnfuqua.com"
+  }
+}
+
+// Verification steps:
+1. Read contacts.json → phone: "12819001802"
+2. Call find_contact("John Fuqua") → phone: "12819001802"
+3. Compare: "12819001802" === "12819001802" ✓
+4. Send to "12819001802" (not "contact:1")
+```
+
+### If Verification Fails
+
+```
+Reeves: "Cannot send message - verification failed:
+
+  contacts.json shows: '12819001802'
+  Messages DB shows: '12819001803' (different!)
+
+  Please update contacts.json or verify correct number."
+```
+
+---
+
 ## Maintenance
 
 **Weekly:**
 - Trim old interactions from contacts (keep last 10)
+- Verify contact phone numbers still valid
 
 **Monthly:**
 - Archive completed project artifacts
 - Update project metadata
+- Cross-check contacts.json against Messages DB
 
 **Quarterly:**
 - Review for data duplication
 - Check contact entry sizes
 - Validate context_files links
+- Audit message sending logs for errors
 
 ---
 
