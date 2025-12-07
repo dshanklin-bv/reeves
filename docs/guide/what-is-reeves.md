@@ -27,6 +27,8 @@ It's not a rigid workflow engine. It's not a locked database schema. It's **stru
 
 This minimal design means AI can adapt to situations Reeves was never explicitly programmed for. New project type? AI figures it out using the same tools. Complex dependency? AI reasons about it from task notes, not a rigid dependency graph.
 
+**The magic trick:** You can assign tasks to Reeves itself. "Reeves, research solar panel contractors and create a comparison doc." Reeves manages both you and itself—keeping you on task while tracking its own work. The system manages the manager.
+
 ## Core Concepts
 
 **Tasks** - Things you need to do. AI creates, updates, and completes them based on natural conversation.
