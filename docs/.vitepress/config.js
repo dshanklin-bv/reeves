@@ -43,25 +43,13 @@ export default defineConfig({
             { text: 'Tasks & Lifecycle', link: '/guide/tasks' },
             { text: 'Projects', link: '/guide/projects' },
             { text: 'Contacts', link: '/guide/contacts' },
-            { text: 'Learning Logs', link: '/guide/learning-logs' },
-            { text: 'Architecture', link: '/guide/architecture' }
-          ]
-        },
-        {
-          text: 'Usage',
-          items: [
-            { text: 'Creating Tasks', link: '/guide/creating-tasks' },
-            { text: 'Managing Projects', link: '/guide/managing-projects' },
-            { text: 'Message Sending', link: '/guide/message-sending' },
-            { text: 'Best Practices', link: '/guide/best-practices' }
+            { text: 'Learning Logs', link: '/guide/learning-logs' }
           ]
         },
         {
           text: 'Advanced',
           items: [
-            { text: 'Data Management', link: '/guide/data-management' },
             { text: 'Scaling Strategy', link: '/guide/scaling' },
-            { text: 'Security & Privacy', link: '/guide/security' },
             { text: 'Troubleshooting', link: '/guide/troubleshooting' }
           ]
         }
@@ -71,10 +59,7 @@ export default defineConfig({
         {
           text: 'Examples',
           items: [
-            { text: 'Real-World Workflows', link: '/examples/real-world' },
-            { text: 'Task Patterns', link: '/examples/task-patterns' },
-            { text: 'Project Templates', link: '/examples/project-templates' },
-            { text: 'Contact Management', link: '/examples/contact-management' }
+            { text: 'Real-World Workflows', link: '/examples/real-world' }
           ]
         }
       ],
