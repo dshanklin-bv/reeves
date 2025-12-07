@@ -3,176 +3,81 @@ layout: home
 
 hero:
   name: Reeves
-  text: The Best Task Manager Until AGI Gets Here
-  tagline: Your personal AI assistant that remembers everything about your life, handles your busywork, and saves you hours every day.
+  text: AI Assistant for Your Life
+  tagline: Track projects, manage contacts, remember everything. Plain JSON files that AI reasons about.
   actions:
     - theme: brand
       text: Get Started
       link: /guide/getting-started
     - theme: alt
-      text: View on GitHub
+      text: GitHub
       link: https://github.com/dshanklin-bv/reeves
 
 features:
-  - icon: 🏠
-    title: Real Life Management
-    details: Track house repairs, family events, friend birthdays, side businesses, legal matters, and everything that actually matters.
+  - icon: 🧠
+    title: Never Forget
+    details: Every conversation, task, and follow-up saved across all your projects.
 
   - icon: ⏱️
-    title: Save 6+ Hours Per Week
-    details: Real users save 50+ minutes daily by automating message reviews, task tracking, and follow-ups in their actual lives.
-
-  - icon: 🧠
-    title: Never Forget Anything
-    details: Reeves remembers every conversation, every task, every follow-up—across all your life's projects.
+    title: 6+ Hours/Week Saved
+    details: Real usage managing 300+ tasks across house repairs, legal cases, family, and side projects.
 
   - icon: 👥
-    title: People Management
-    details: Remember how to talk to everyone. Communication preferences, relationship context, recent interactions—all tracked.
+    title: Smart Contacts
+    details: Communication preferences and relationship context for everyone in your life.
 
   - icon: 📁
-    title: Intentionally Simple
-    details: Plain JSON files instead of databases. Easy to read, edit, debug, and backup. No complexity.
+    title: Plain JSON
+    details: No databases, no Docker, no migrations. Just files you can read and edit.
 
   - icon: 🔒
     title: Privacy First
-    details: All your data stays local. Nothing is sent to servers. Your life, your data, your control.
+    details: All data stays local. Nothing sent to servers.
 
-  - icon: 📱
-    title: Smart Messaging
-    details: Draft texts with the right tone for each person. Double-verify to never send to the wrong recipient.
-
-  - icon: 💼
-    title: Works for Software Too
-    details: Yes, you can manage software projects. But Reeves was built for the messy reality of human life.
+  - icon: 💬
+    title: Natural Language
+    details: Talk to Claude naturally. It handles task creation, updates, and prioritization.
 ---
 
-## Real-World Time Savings
+## For Power Users Only
 
-::: tip From Actual Usage (2025-12-06)
-**15 minutes saved:** Reviewed 24 hours of text messages, identified 5 new tasks, updated 3 existing tasks
+If you tinker with Claude Code and MCP servers, Reeves gives you a head start building your own life management system.
 
-**10 minutes saved:** Drafted professional text with correct tone, verified recipient across two databases
+**Not a finished SaaS product.** It's a starting point you customize and extend.
 
-**20 minutes saved:** Created partnership project with context files, follow-up tasks, and learning logs
-
-**5 minutes saved:** Tracked lunch expenses and gift purchases automatically
-
-**Total: 50+ minutes saved today = 6+ hours per week = 25+ hours per month**
-:::
-
-## What is Reeves?
-
-**Reeves is not for everyone.** It's for Claude Code power users who want to build their own life management system.
-
-If you're into tinkering with MCP servers, customizing AI workflows, and want a **starting point** (not a finished product) to manage your life through AI—Reeves gives you that headstart.
-
-### Why Reeves is Different
-
-Traditional task managers lock you into:
-- ❌ Their database schema
-- ❌ Their UI patterns
-- ❌ Their idea of how you should work
-- ❌ Their AI integration (or lack thereof)
-
-Reeves is just **a folder structure and some TypeScript**:
-- ✅ Modify the schema however you want
-- ✅ Add your own MCP tools
-- ✅ Use with Claude Code, Gemini CLI, or Codex
-- ✅ Built for 2026-2027 when AI gets smarter
-
-### The Reeves Philosophy
-
-Reeves is opinionated about **getting things done**, not code:
-
-1. **Narrate your life** - Talk to Claude about what's happening
-2. **Capture everything** - Tasks, context, people, projects
-3. **Research naturally** - AI understands dependencies through notes
-4. **Limit human overhead** - AI digests info, you make decisions
-5. **Execute in real world** - Phone calls, texts, follow-ups
-
-**If you're willing to be disciplined** about narrating details of your life into Claude Code (or Gemini CLI, or Codex), you'll see growing gains as you use Reeves more. Reeves learns about you, your habits, your communication patterns, and improves itself. The AI gets better at managing your life because it remembers everything.
+## Install
 
 ```bash
-# Install in 5 minutes
 git clone git@github.com:dshanklin-bv/reeves.git
 cd reeves/mcp-server
 npm install && npm run build
 
-# Configure once, use forever
-# See Getting Started guide for MCP configuration
+# Configure MCP in Claude Code (see Getting Started)
 ```
 
-## Who Should Use Reeves?
+## Use It
 
-### You Should Use Reeves If:
+```
+You: "Create a task to call the plumber"
+You: "What's next?"
+You: "Mark task 5 done"
+```
 
-- ✅ You use **Claude Code** (or Gemini CLI, or Codex) regularly
-- ✅ You're comfortable with **MCP servers** and TypeScript
-- ✅ You want to **tinker and customize** your task system
-- ✅ You're disciplined about **narrating your life** to AI
-- ✅ You understand this is a **starting point**, not a finished product
-- ✅ You want a system built for **future AI** (2026-2027 capabilities)
-
-### You Should NOT Use Reeves If:
-
-- ❌ You want a finished SaaS product with a UI
-- ❌ You're not technical or don't want to tinker
-- ❌ You need team collaboration features
-- ❌ You want something that "just works" out of the box
-- ❌ You're not willing to adapt your workflow
-
-**Reeves is for power users who want control.** If that's you, welcome. If not, try Todoist or Things—they're great finished products.
-
-## Why Files Instead of Software?
-
-**Because Reeves is intentionally not software.**
-
-Its creator, Daniel Shanklin, believes the future is **AI data management systems**, not traditional software with UIs and rigid workflows.
-
-Reeves is a **data structure** that AI can reason about:
-- Open tasks.json and see everything
-- Edit with any text editor (or let AI edit it)
-- Backup with simple file copy
-- Version control with git
-- No Docker, no migrations, no complexity
-- No UI to become outdated
-- No "features" to maintain
-
-When you outgrow JSON (~300 tasks), there's a clear migration path to SQLite or Postgres. But most users never need it.
-
-**The bet:** In 2026-2027, AI will be smart enough to manage your life directly through data. Reeves is built for that future, not for today's "click buttons in a UI" paradigm.
+Claude handles the rest.
 
 ## Philosophy
 
-Reeves is designed for **AI reasoning, not rigid automation**:
+**Intentionally not software.** Plain JSON files that AI reasons about. Built for 2026-2027 when AI manages your life through data, not buttons.
 
-- Read all tasks and understand dependencies naturally
-- Make judgment calls about task priority
-- Skip overly complex dependency systems
-- Trust plain English notes over strict schemas
+- Files instead of databases (migrate to SQLite at ~300 tasks)
+- Learning logs for deep context, not bloated notes
+- AI makes judgment calls, not rigid automation
+- For narrating your life to AI, not clicking UIs
 
-**Build for understanding, not just execution.**
-
-## Quick Example
-
-```
-You: "Create a task to research database options"
-Claude: [Creates task with Reeves]
-
-You: "What's next?"
-Claude: [Shows prioritized active tasks]
-
-You: "Mark task 5 as complete with notes about what I found"
-Claude: [Completes task, preserves context]
-```
-
-All your work is saved. Forever. Across sessions.
-
-## Ready to Save Hours?
+## Ready?
 
 <div style="text-align: center; margin: 2rem 0;">
   <a href="/guide/getting-started" style="display: inline-block; padding: 1rem 2rem; background: #3eaf7c; color: white; border-radius: 4px; text-decoration: none; font-weight: 600;">
-    Get Started in 5 Minutes →
+    Get Started →
   </a>
 </div>
