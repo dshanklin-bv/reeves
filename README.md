@@ -22,6 +22,8 @@ Reeves is an AI-powered task manager that works alongside Claude Code. Instead o
 
 Reeves is a persistent task management system designed for AI-first workflows. It maintains state across Claude Code sessions, manages complex projects, and helps coordinate life's moving parts.
 
+**Intentionally Simple:** Reeves uses plain JSON files instead of a database. Why? Because files are easy to read, edit, debug, and backup. No Docker containers, no database migrations, no complexity. Just text files that work. When you outgrow JSON (~300 tasks), there's a clear migration path to SQLite or Postgres—but most users never need it.
+
 ## ⚠️ Privacy Notice
 
 **This repository contains only the Reeves framework code.** User data (tasks, contacts, learning logs) is stored locally in your private directory and never committed to version control.
