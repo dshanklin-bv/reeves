@@ -5,7 +5,16 @@ export default defineConfig({
   description: 'AI-powered task management system for Claude Code',
   base: '/reeves/',
 
-  ignoreDeadLinks: true,
+  markdown: {
+    config: (md) => {
+      // Add copy markdown button to every page
+      const defaultRender = md.render
+      md.render = function(...args) {
+        const result = defaultRender.apply(this, args)
+        return '<CopyMarkdownButton />\n\n' + result
+      }
+    }
+  },
 
   themeConfig: {
     logo: '/logo.svg',
