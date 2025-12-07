@@ -1,10 +1,14 @@
-# Reeves - AI Task Management System
+# Reeves - The Best Task Manager Until AGI Gets Here
 
-> **Your personal AI assistant that remembers everything, handles your busywork, and saves you hours every day.**
+> **Your personal AI assistant that remembers everything about your life, handles your busywork, and saves you hours every day.**
 
 ## What is Reeves?
 
-Reeves is an AI-powered task manager that works alongside Claude Code. Instead of juggling sticky notes, scattered to-do lists, and forgotten context, Reeves remembers everything for you and handles the tedious stuff automatically.
+Reeves is an AI-powered personal assistant that manages your entire life. Track family events, coordinate contractors for your house sale, remember to follow up with friends, manage your side business—all while never forgetting a detail.
+
+Instead of juggling sticky notes, scattered to-do lists, random text messages, and forgotten context, Reeves remembers everything for you and handles the tedious stuff automatically.
+
+**Yes, you can use it for software projects too.** But Reeves shines when managing the messy, multi-threaded reality of actual human life.
 
 ## Real-World Time Savings (From Today)
 

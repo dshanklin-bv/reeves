@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Reeves
-  text: AI Task Management System
-  tagline: Your personal AI assistant that remembers everything, handles your busywork, and saves you hours every day.
+  text: The Best Task Manager Until AGI Gets Here
+  tagline: Your personal AI assistant that remembers everything about your life, handles your busywork, and saves you hours every day.
   actions:
     - theme: brand
       text: Get Started
@@ -14,13 +14,21 @@ hero:
       link: https://github.com/dshanklin-bv/reeves
 
 features:
+  - icon: 🏠
+    title: Real Life Management
+    details: Track house repairs, family events, friend birthdays, side businesses, legal matters, and everything that actually matters.
+
   - icon: ⏱️
     title: Save 6+ Hours Per Week
-    details: Real users save 50+ minutes daily by automating message reviews, task tracking, and follow-ups.
+    details: Real users save 50+ minutes daily by automating message reviews, task tracking, and follow-ups in their actual lives.
 
   - icon: 🧠
-    title: Never Forget Context
-    details: Reeves remembers everything across Claude Code sessions. Pick up exactly where you left off.
+    title: Never Forget Anything
+    details: Reeves remembers every conversation, every task, every follow-up—across all your life's projects.
+
+  - icon: 👥
+    title: People Management
+    details: Remember how to talk to everyone. Communication preferences, relationship context, recent interactions—all tracked.
 
   - icon: 📁
     title: Intentionally Simple
@@ -28,23 +36,15 @@ features:
 
   - icon: 🔒
     title: Privacy First
-    details: All your data stays local. Nothing is sent to servers. You own your tasks and contacts.
-
-  - icon: 🤖
-    title: AI-First Design
-    details: Built for AI reasoning, not rigid automation. Claude understands dependencies naturally.
+    details: All your data stays local. Nothing is sent to servers. Your life, your data, your control.
 
   - icon: 📱
-    title: Message Management
-    details: Double-verify protocol prevents wrong recipients. Draft messages with correct tone automatically.
+    title: Smart Messaging
+    details: Draft texts with the right tone for each person. Double-verify to never send to the wrong recipient.
 
-  - icon: 📊
-    title: Project Organization
-    details: Group related tasks with context files. Learning logs capture strategic decisions.
-
-  - icon: 🔄
-    title: Scales When You Need
-    details: Start with JSON. Migrate to SQLite or Postgres when you hit ~300 tasks.
+  - icon: 💼
+    title: Works for Software Too
+    details: Yes, you can manage software projects. But Reeves was built for the messy reality of human life.
 ---
 
 ## Real-World Time Savings
@@ -63,7 +63,11 @@ features:
 
 ## What is Reeves?
 
-Reeves is an AI-powered task manager that works alongside Claude Code. Instead of juggling sticky notes, scattered to-do lists, and forgotten context, Reeves remembers everything for you and handles the tedious stuff automatically.
+Reeves is an AI-powered personal assistant that manages your entire life. Track family events, coordinate contractors for your house sale, remember to follow up with friends, manage your side business—all while never forgetting a detail.
+
+Instead of juggling sticky notes, scattered to-do lists, random text messages, and forgotten context, Reeves remembers everything for you and handles the tedious stuff automatically.
+
+**Yes, you can use it for software projects too.** But Reeves shines when managing the messy, multi-threaded reality of actual human life.
 
 ```bash
 # Install in 5 minutes

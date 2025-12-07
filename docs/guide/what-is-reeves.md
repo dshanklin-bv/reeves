@@ -1,15 +1,24 @@
 # What is Reeves?
 
-Reeves is a persistent task management system designed for AI-first workflows. It maintains state across Claude Code sessions, manages complex projects, and helps coordinate life's moving parts.
+Reeves is the best task management system available until AGI gets here. It's your personal AI assistant that manages your entire life—family, friends, house projects, legal matters, side businesses, and yes, even software development if that's your thing.
 
 ## The Problem
 
-When working with AI assistants like Claude Code:
+Life is messy. You're juggling:
 
-- **Context gets lost** between sessions
-- **Tasks are forgotten** after conversations end
+- **Family events** - Birthdays, lunches with the kids, keeping up with relatives
+- **House projects** - Contractors, repairs, sales, renovations
+- **Relationships** - Following up with friends, remembering how to talk to each person
+- **Legal matters** - Court dates, attorney calls, document deadlines
+- **Side businesses** - Partnership discussions, client work, project coordination
+- **Daily life** - Expenses, errands, appointments, random tasks
+
+And when using AI assistants:
+
+- **Context gets lost** between conversations
+- **Tasks are forgotten** after sessions end
 - **Follow-ups disappear** into the void
-- **Project history** vanishes
+- **People details** vanish (how do I talk to this person again?)
 - **You repeat yourself** constantly
 
 ## The Solution
@@ -104,20 +113,23 @@ When you outgrow JSON (~300 tasks), there's a clear migration path to SQLite or 
 
 Reeves is perfect for:
 
-- **Engineers** managing personal projects
-- **Entrepreneurs** juggling multiple ventures
-- **Freelancers** tracking client work
-- **Students** organizing research projects
-- **Anyone** who uses Claude Code regularly
+- **Parents** coordinating family life, kids' events, household projects
+- **Homeowners** managing contractors, repairs, and house sales
+- **Busy professionals** juggling work, family, side projects
+- **People with legal matters** tracking court dates, attorney calls, document deadlines
+- **Entrepreneurs** managing multiple ventures and partnerships
+- **Anyone** whose life is too complex for sticky notes and scattered lists
+
+**Software developers can use it too**, but Reeves was built for the messy reality of human life, not just code.
 
 ## What Reeves is Not
 
 Reeves is **not**:
 
-- A team collaboration tool (it's personal)
-- A time tracker (it's task-focused)
-- A calendar (it's context-focused)
-- A replacement for your project manager (it's a supplement)
+- A team collaboration tool (it's deeply personal)
+- A calendar replacement (it's task and context-focused)
+- A CRM for businesses (it's for YOUR life)
+- A time tracker (it's about remembering, not billing)
 
 ## Next Steps
 
