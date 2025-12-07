@@ -124,16 +124,24 @@ npm install && npm run build
 
 **Reeves is for power users who want control.** If that's you, welcome. If not, try Todoist or Things—they're great finished products.
 
-## Why Files Instead of a Database?
+## Why Files Instead of Software?
 
-**Because files are debuggable.** You can:
+**Because Reeves is intentionally not software.**
+
+Its creator, Daniel Shanklin, believes the future is **AI data management systems**, not traditional software with UIs and rigid workflows.
+
+Reeves is a **data structure** that AI can reason about:
 - Open tasks.json and see everything
-- Edit with any text editor
+- Edit with any text editor (or let AI edit it)
 - Backup with simple file copy
 - Version control with git
 - No Docker, no migrations, no complexity
+- No UI to become outdated
+- No "features" to maintain
 
 When you outgrow JSON (~300 tasks), there's a clear migration path to SQLite or Postgres. But most users never need it.
+
+**The bet:** In 2026-2027, AI will be smart enough to manage your life directly through data. Reeves is built for that future, not for today's "click buttons in a UI" paradigm.
 
 ## Philosophy
 

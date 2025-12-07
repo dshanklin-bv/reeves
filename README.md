@@ -26,7 +26,7 @@ Instead of juggling sticky notes, scattered to-do lists, random text messages, a
 
 Reeves is a persistent task management system designed for AI-first workflows. It maintains state across Claude Code sessions, manages complex projects, and helps coordinate life's moving parts.
 
-**Intentionally Simple:** Reeves uses plain JSON files instead of a database. Why? Because files are easy to read, edit, debug, and backup. No Docker containers, no database migrations, no complexity. Just text files that work. When you outgrow JSON (~300 tasks), there's a clear migration path to SQLite or Postgres—but most users never need it.
+**Intentionally Not Software:** Reeves is a data structure, not traditional software. Its creator, Daniel Shanklin, believes the future is AI data management systems, not UIs with buttons. Reeves is plain JSON files that AI can reason about—no Docker, no migrations, no "features" to maintain. Built for 2026-2027 when AI manages your life directly through data, not through clicking buttons.
 
 ## ⚠️ Privacy Notice
 
