@@ -43,6 +43,10 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 
+# VitePress
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
 # ========================================
 # OS Files
 # ========================================

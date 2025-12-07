@@ -1,0 +1,23 @@
+{
+  "name": "reeves",
+  "version": "1.0.0",
+  "description": "AI-powered task management system for Claude Code",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "ai",
+    "task-management",
+    "mcp",
+    "claude-code",
+    "productivity"
+  ],
+  "author": "Daniel Shanklin",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
