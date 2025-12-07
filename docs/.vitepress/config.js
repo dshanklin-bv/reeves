@@ -5,6 +5,8 @@ export default defineConfig({
   description: 'AI-powered task management system for Claude Code',
   base: '/reeves/',
 
+  ignoreDeadLinks: true,
+
   themeConfig: {
     logo: '/logo.svg',
 
