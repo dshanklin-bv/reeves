@@ -63,11 +63,35 @@ features:
 
 ## What is Reeves?
 
-Reeves is an AI-powered personal assistant that manages your entire life. Track family events, coordinate contractors for your house sale, remember to follow up with friends, manage your side business—all while never forgetting a detail.
+**Reeves is not for everyone.** It's for Claude Code power users who want to build their own life management system.
 
-Instead of juggling sticky notes, scattered to-do lists, random text messages, and forgotten context, Reeves remembers everything for you and handles the tedious stuff automatically.
+If you're into tinkering with MCP servers, customizing AI workflows, and want a **starting point** (not a finished product) to manage your life through AI—Reeves gives you that headstart.
 
-**Yes, you can use it for software projects too.** But Reeves shines when managing the messy, multi-threaded reality of actual human life.
+### Why Reeves is Different
+
+Traditional task managers lock you into:
+- ❌ Their database schema
+- ❌ Their UI patterns
+- ❌ Their idea of how you should work
+- ❌ Their AI integration (or lack thereof)
+
+Reeves is just **a folder structure and some TypeScript**:
+- ✅ Modify the schema however you want
+- ✅ Add your own MCP tools
+- ✅ Use with Claude Code, Gemini CLI, or Codex
+- ✅ Built for 2026-2027 when AI gets smarter
+
+### The Reeves Philosophy
+
+Reeves is opinionated about **getting things done**, not code:
+
+1. **Narrate your life** - Talk to Claude about what's happening
+2. **Capture everything** - Tasks, context, people, projects
+3. **Research naturally** - AI understands dependencies through notes
+4. **Limit human overhead** - AI digests info, you make decisions
+5. **Execute in real world** - Phone calls, texts, follow-ups
+
+**If you're willing to be disciplined** about narrating details of your life into Claude Code (or Gemini CLI, or Codex), you'll see growing gains as you use Reeves more. Reeves learns about you, your habits, your communication patterns, and improves itself. The AI gets better at managing your life because it remembers everything.
 
 ```bash
 # Install in 5 minutes
@@ -78,6 +102,27 @@ npm install && npm run build
 # Configure once, use forever
 # See Getting Started guide for MCP configuration
 ```
+
+## Who Should Use Reeves?
+
+### You Should Use Reeves If:
+
+- ✅ You use **Claude Code** (or Gemini CLI, or Codex) regularly
+- ✅ You're comfortable with **MCP servers** and TypeScript
+- ✅ You want to **tinker and customize** your task system
+- ✅ You're disciplined about **narrating your life** to AI
+- ✅ You understand this is a **starting point**, not a finished product
+- ✅ You want a system built for **future AI** (2026-2027 capabilities)
+
+### You Should NOT Use Reeves If:
+
+- ❌ You want a finished SaaS product with a UI
+- ❌ You're not technical or don't want to tinker
+- ❌ You need team collaboration features
+- ❌ You want something that "just works" out of the box
+- ❌ You're not willing to adapt your workflow
+
+**Reeves is for power users who want control.** If that's you, welcome. If not, try Todoist or Things—they're great finished products.
 
 ## Why Files Instead of a Database?
 
